@@ -27,13 +27,8 @@ $data = get_products(4);
 
             <div class="nav-right">
                 <div class="links">
-<<<<<<< HEAD:public/products.php
                     <a href="#" class="link active">Home</a>
                     <a href="./index.php" class="link">Dashboard</a>
-=======
-                    <a href="./dashboard.html" class="link active">Home</a>
-                    <a href="./dashboard.html" class="link">Dashboard</a>
->>>>>>> 7f56f4b (profile):products.html
                 </div>
 
                 <div class="avatar" id="avatar">
