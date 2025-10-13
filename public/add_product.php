@@ -19,7 +19,6 @@
 
 
             <div class="nav-right">
-                <div class="links">
                     <a href="./index.php" class="link active">Home</a>
                     <a href="./products.php" class="link">Products</a>
                 </div>
@@ -49,6 +48,14 @@
 
                 <label for="keywords">Keywords (optional, comma separated)</label>
                 <input type="text" id="keywords" name="keywords" placeholder="keyword1, keyword2">
+
+                <label for="image">Product Image (optional)</label>
+                <input type="file" id="image" name="image" accept="image/*">
+
+
+                <!-- we need php redirecting after submission -->
+                <!-- <?php
+                // add_product_submit.php // save product here... // redirect after saving header('Location: post.html'); exit; ?> -->
 
                 <button type="submit" class="submit-btn">Add Product</button>
                 <button type="reset" class="submit-btn">Clear</button>

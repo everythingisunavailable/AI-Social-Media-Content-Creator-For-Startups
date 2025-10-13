@@ -27,8 +27,13 @@ $data = get_products(4);
 
             <div class="nav-right">
                 <div class="links">
+<<<<<<< HEAD:public/products.php
                     <a href="#" class="link active">Home</a>
                     <a href="./index.php" class="link">Dashboard</a>
+=======
+                    <a href="./dashboard.html" class="link active">Home</a>
+                    <a href="./dashboard.html" class="link">Dashboard</a>
+>>>>>>> 7f56f4b (profile):products.html
                 </div>
 
                 <div class="avatar" id="avatar">
@@ -42,7 +47,7 @@ $data = get_products(4);
 
     <main class="main">
         <div class="wrap">
-            <h2 class="title">Products</h2>
+            <h2 class="title">PRODUCTS</h2>
 
             <div class="grid" id="grid">
 
@@ -97,7 +102,7 @@ $data = get_products(4);
         </div>
     </main>
 
-    <script src=""></script>
+
 </body>
 
 
