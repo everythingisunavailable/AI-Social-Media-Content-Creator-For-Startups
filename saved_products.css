@@ -1,0 +1,42 @@
+.products-form {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 18px;
+    font-family: Arial, system-ui, -apple-system;
+    padding: 2rem;
+    margin-left: 4rem;
+}
+
+
+
+.card input[type="radio"] {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+.actions {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+
+}
+
+.actions a {
+    padding: 1.3rem 3.3rem;
+    border-radius: 8px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.actions:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
