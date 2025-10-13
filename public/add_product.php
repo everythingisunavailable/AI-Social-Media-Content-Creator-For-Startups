@@ -20,8 +20,8 @@
 
             <div class="nav-right">
                 <div class="links">
-                    <a href="./dashboard.html" class="link active">Home</a>
-                    <a href="./products.html" class="link">Products</a>
+                    <a href="./index.php" class="link active">Home</a>
+                    <a href="./products.php" class="link">Products</a>
                 </div>
 
                 <div class="avatar" id="avatar">

@@ -192,6 +192,10 @@ body {
     text-decoration: none;
 }
 
+.selected{
+    border: 2px solid rgb(255, 49, 49);
+    border-radius: 5px;
+}
 
 
 

@@ -8,10 +8,10 @@
     justify-content: center;
     text-align: center;
     padding: 0.6rem;
-    background-image: url('./produkte.jpg');
+    background-image: url('../assets/admin/produkte.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position-y: 30%;
     border-radius: 0.75rem;
     box-shadow: 0 4px 12px rgba(75, 123, 236, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;

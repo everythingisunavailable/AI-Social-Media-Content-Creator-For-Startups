@@ -1,3 +1,8 @@
+<?php
+require '../server/product.php';
+$data = get_products(4);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +28,7 @@
             <div class="nav-right">
                 <div class="links">
                     <a href="#" class="link active">Home</a>
-                    <a href="./dashboard.html" class="link">Dashboard</a>
+                    <a href="./index.php" class="link">Dashboard</a>
                 </div>
 
                 <div class="avatar" id="avatar">
@@ -55,15 +60,19 @@
 
 
                 <!-- do shtohen ketu katro9ret e tjere -->
-
-
-                <a href="#" class="card">
-                    <div class="products">
-                        <p class="prod-name">Name</p>
-                        <p class="prod-desc">This is the description of the product.</p>
-                        <p class="prod-updated">Updated <time datetime="2025-10-10">Oct 10, 2025</time></p>
-                    </div>
-                </a>
+                <?php 
+                foreach ($data as $key => $value) {
+                    echo '
+                        <a href="#" class="card">
+                            <div class="products">
+                                <p class="prod-name">'. $data[$key]['name'] .'</p>
+                                <p class="prod-desc">'. $data[$key]['description'] .'</p>
+                                <p class="prod-updated">Updated '. $data[$key]['updated_at'] .'</p>
+                            </div>
+                        </a>
+                    ';
+                }
+                ?>
 
 
 

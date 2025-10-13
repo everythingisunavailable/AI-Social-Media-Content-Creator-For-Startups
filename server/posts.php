@@ -1,5 +1,5 @@
 <?php
-include './dp.inc.php';
+include '../server/db.inc.php';
 
 function get_posts($user_id){
     global $pdo;
