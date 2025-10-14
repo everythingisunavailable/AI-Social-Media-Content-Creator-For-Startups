@@ -27,7 +27,7 @@ $data = get_products(4);
 
             <div class="nav-right">
                 <div class="links">
-                    <a href="#" class="link active">Home</a>
+                    <a href="./index.php" class="link active">Home</a>
                     <a href="./index.php" class="link">Dashboard</a>
                 </div>
 
@@ -46,7 +46,7 @@ $data = get_products(4);
 
             <div class="grid" id="grid">
 
-                <a href="./add_product.html" class="card">
+                <a href="./add_product.php" class="card">
                     <div class="icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">

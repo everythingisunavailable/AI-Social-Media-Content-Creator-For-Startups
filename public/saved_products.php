@@ -23,8 +23,8 @@
 
             <div class="nav-right">
                 <div class="links">
-                    <a href="./dashboard.html" class="link active">Home</a>
-                    <a href="./dashboard.html" class="link">Dashboard</a>
+                    <a href="./index.php" class="link active">Home</a>
+                    <a href="./index.php" class="link">Dashboard</a>
                 </div>
 
                 <div class="avatar" id="avatar">
@@ -35,7 +35,7 @@
         </div>
     </nav>
 
-
+    <!-- TODO: handle the selection of a product -->
     <form action="" method="" class="products-form">
         <h2 class="title">SAVED PRODUCTS</h2>
 
@@ -77,7 +77,7 @@
 
         const updateLink = () => {
             const checked = document.querySelector('input[name="product_id"]:checked');
-            link.href = checked ? `post.html?product_id=${encodeURIComponent(checked.value)}` : '';
+            link.href = checked ? `post.php?product_id=${encodeURIComponent(checked.value)}` : '';
             link.classList.toggle('disabled', !checked);
             link.setAttribute('aria-disabled', !checked);
             link.tabIndex = checked ? 0 : -1;

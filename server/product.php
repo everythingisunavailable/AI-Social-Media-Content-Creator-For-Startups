@@ -1,14 +1,14 @@
 <?php
 include 'db.inc.php';
 
-function create_product($user_id, $name, $description, $tone = null, $keywords = null)
+function create_product($user_id, $name, $description, $tone = null, $keywords = null, $image_url = null)
 {
     global $pdo;
 
     try {
         $stmt = $pdo->prepare("
-            INSERT INTO product (user_id, name, description, tone, keywords)
-            VALUES (:user_id, :name, :description, :tone, :keywords)
+            INSERT INTO product (user_id, name, description, tone, keywords, image_url)
+            VALUES (:user_id, :name, :description, :tone, :keywords, :image_url)
         ");
 
         $stmt->execute([
@@ -16,7 +16,8 @@ function create_product($user_id, $name, $description, $tone = null, $keywords =
             ':name'        => $name,
             ':description' => $description,
             ':tone'        => $tone,
-            ':keywords'    => $keywords
+            ':keywords'    => $keywords,
+            ':image_url'   => $image_url
         ]);
 
         return $pdo->lastInsertId(); // return new product ID

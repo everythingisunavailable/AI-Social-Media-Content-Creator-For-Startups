@@ -35,7 +35,7 @@
         <div class="wrap">
             <h2 class="title">Add a New Product</h2>
 
-            <form action=" " method="POST" class="product-form">
+            <form action="../server/save_product.php" method="POST" enctype="multipart/form-data" class="product-form">
                 <label for="name">Product Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter product name" required>
 
@@ -51,11 +51,6 @@
 
                 <label for="image">Product Image (optional)</label>
                 <input type="file" id="image" name="image" accept="image/*">
-
-
-                <!-- we need php redirecting after submission -->
-                <!-- <?php
-                // add_product_submit.php // save product here... // redirect after saving header('Location: post.html'); exit; ?> -->
 
                 <button type="submit" class="submit-btn">Add Product</button>
                 <button type="reset" class="submit-btn">Clear</button>

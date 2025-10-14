@@ -1,3 +1,8 @@
+<?php
+    //TODO: get product id from session
+    require '../server/product.php';
+    $product = get_product(1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,8 +27,8 @@
 
             <div class="nav-right">
                 <div class="links">
-                    <a href="./dashboard.html" class="link active">Home</a>
-                    <a href="./products.html" class="link">Products</a>
+                    <a href="./index.php" class="link active">Home</a>
+                    <a href="./products.php" class="link">Products</a>
 
                 </div>
 
@@ -56,7 +61,7 @@
             <img src="<?php echo htmlspecialchars($product['image_url']); ?>" alt="Product Image">
             <?php endif; ?>
         </div>
-        <form action=" " method="POST">
+        <form action="../server/generate_post.php" method="POST">
             <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
 
             <!-- fiktive -->

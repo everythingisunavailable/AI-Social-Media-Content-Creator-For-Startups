@@ -35,7 +35,7 @@ $selected = [
 
             <div class="nav-right">
                 <div class="links">
-                    <a href="#" class="link active">Home</a>
+                    <a href="./index.php" class="link active">Home</a>
                     <a href="./products.php" class="link">Products</a>
                 </div>
 
@@ -103,7 +103,7 @@ $selected = [
                     <a href="./add_product.php" class="popup-link">
                         <i class="fas fa-plus"></i> Use New Product
                     </a>
-                    <a href="#" class="popup-link">
+                    <a href="./saved_products.php" class="popup-link">
                         <i class="fas fa-plus"></i> Use Saved Product
                     </a>
                 </div>
