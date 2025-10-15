@@ -1,6 +1,8 @@
 <?php
 require '../server/product.php';
-$data = get_products(4);
+require '../server/session.inc.php';
+startSession();
+$data = get_products($_SESSION['user_id']);
 ?>
 
 <!DOCTYPE html>

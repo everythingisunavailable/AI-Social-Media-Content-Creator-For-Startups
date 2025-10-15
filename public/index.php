@@ -1,6 +1,11 @@
 <?php
+require '../server/session.inc.php';
 require '../server/posts.php';
-$data = get_posts(4);
+
+startSession();
+if(!isset($_SESSION['user_id'])) header("Location: ../public/google_login.php");
+
+$data = get_posts($_SESSION['user_id']);
 $selected = [
     'instagram' => null,
     'facebook'  => null,
@@ -40,7 +45,9 @@ $selected = [
                 </div>
 
                 <div class="avatar" id="avatar">
-                    <img src="" alt="User Avatar" id="avatarImg">
+                    <?php 
+                    echo '<img src=" '."#".' " alt="User Avatar" id="avatarImg">';
+                    ?>
                 </div>
             </div>
 

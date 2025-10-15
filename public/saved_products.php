@@ -1,5 +1,16 @@
-//TODO: based on user id set in the session, get all his saved product
+<?php
+require '../server/session.inc.php';
+require '../server/product.php';
 
+startSession();
+if(!isset($_SESSION['user_id']))
+{
+    echo '<p>User not logged in!</p>';
+    exit();
+}
+$saved_products = get_products($_SESSION['user_id']);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,26 +52,26 @@
     <form action="" method="" class="products-form">
         <h2 class="title">SAVED PRODUCTS</h2>
 
-        <div class="grid" role="list">
-            <label class="card" role="listitem">
-                <input type="radio" name="product_id" value="PRODUCT_ID_1" required>
-                <div class="products">
-                    <p class="prod-name">Product Name </p>
-                    <p class="prod-desc">This is the description of the product.</p>
-                    <p class="prod-updated">Updated <time datetime="2025-10-10">Oct 10, 2025</time></p>
-                </div>
-            </label>
-
-            <label class="card" role="listitem">
-                <input type="radio" name="product_id" value="PRODUCT_ID_2" required>
-                <div class="products">
-                    <p class="prod-name">Product Name </p>
-                    <p class="prod-desc">This is the description of the product.</p>
-                    <p class="prod-updated">Updated <time datetime="2025-10-10">Oct 10, 2025</time></p>
-                </div>
-            </label>
-
-        </div>
+            <div class="grid" role="list">
+            <?php foreach ($saved_products as $product): ?>
+                <label class="card" role="listitem">
+                    <input type="radio" name="product_id" value="<?= htmlspecialchars($product['id']) ?>" required>
+                    <div class="products">
+                        <p class="prod-name"><?= htmlspecialchars($product['name']) ?></p>
+                        <p class="prod-desc"><?= htmlspecialchars($product['description']) ?></p>
+                        <p class="prod-tone"><strong>Tone:</strong> <?= htmlspecialchars($product['tone']) ?></p>
+                        <p class="prod-keywords"><strong>Keywords:</strong> <?= htmlspecialchars($product['keywords']) ?></p>
+                        <?php if (!empty($product['image_url'])): ?>
+                            <img src="<?= htmlspecialchars($product['image_url']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" width="100">
+                        <?php endif; ?>
+                        <p class="prod-updated">
+                            Updated <time datetime="<?= date('c', strtotime($product['updated_at'] ?? date('Y-m-d'))) ?>">
+                            <?= date('M d, Y', strtotime($product['updated_at'] ?? date('Y-m-d'))) ?></time>
+                        </p>
+                    </div>
+                </label>
+            <?php endforeach; ?>
+            </div>
 
         <div class="actions">
             <a id="createLink" class="create-post disabled" aria-disabled="true" tabindex="-1" role="button"> Create

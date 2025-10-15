@@ -2,7 +2,8 @@
     "require": {
         "symfony/http-client": "^7.3",
         "nyholm/psr7": "^1.8",
-        "guzzlehttp/guzzle": "^7.10"
+        "guzzlehttp/guzzle": "^7.10",
+        "google/apiclient": "^2.16"
     },
     "config": {
         "allow-plugins": {
