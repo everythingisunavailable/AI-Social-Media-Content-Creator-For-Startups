@@ -1,3 +1,5 @@
+//TODO: based on user id set in the session, get all his saved product
+
 <!DOCTYPE html>
 <html lang="en">
 

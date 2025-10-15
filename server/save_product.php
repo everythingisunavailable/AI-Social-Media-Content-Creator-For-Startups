@@ -1,5 +1,5 @@
 <?php
-
+require __DIR__ . "/session.inc.php";
 $name        = $_POST['name'] ?? null;
 $description = $_POST['description'] ?? null;
 $tone        = $_POST['tone'] ?? null;
@@ -17,6 +17,6 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
 
 require 'product.php';
 
-create_product(4, $name, $description, $tone, $keywords, $destPath);
-//TODO : add product id to session, the above function returns the isnterted product id.
+$product_id = create_product(4, $name, $description, $tone, $keywords, $destPath);
+setSession("product_id", $product_id);
 header('Location: ../public/post.php');
