@@ -1,7 +1,13 @@
 <?php
-    //TODO: get product id from session
+    require '../server/session.inc.php';
     require '../server/product.php';
-    $product = get_product(1);
+    startSession();
+    if (!isset($_SESSION['product_id'])) 
+    {
+        echo '<p>Product not selected or session has failed!</p>';
+        exit();
+    }
+    $product = get_product($_SESSION['product_id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,16 +69,6 @@
         </div>
         <form action="../server/generate_post.php" method="POST">
             <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
-
-            <!-- fiktive -->
-            <!-- <h2>Create Post for Book</h2>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sit iste odit suscipit velit non nemo minus
-            sapiente veniam enim. Nulla facilis at veritatis consequatur voluptatem corporis voluptate quo facere.</p>
-        <p>tone tone tone</p>
-        <img src="./produkte.jpg" alt="produkti">-->
-
-
-
             <label>Choose Where to Post</label>
             <div class="socials-checkboxes">
                 <label class="platform">
