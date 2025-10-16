@@ -9,7 +9,7 @@
 <style>
   h1 { text-align: center; margin-top: 20px; }
   .dashboard { display: flex; flex-direction: column; gap: 40px; padding: 20px; }
-  .platform-section { display: flex; flex-wrap: wrap; gap: 20px; }
+  .platform-section { display: flex; flex-wrap: wrap; gap: 50px; }
   .chart-container { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); flex: 1 1 48%; }
   canvas { max-width: 100%; }
   h2 { text-align: center; margin-bottom: 20px; font-size: 1.1rem; }
@@ -25,7 +25,7 @@
       <div class="nav-wrap">
           <div class="nav-left">
               <h1 class="logo">sh<span class = "logo gradient">AI</span>r</h1>
-          </div>
+          </div>  
 
 
           <div class="nav-right">
@@ -33,6 +33,7 @@
                   <a href="./index.php" class="link">Home</a>
                   <a href="./products.php" class="link">Products</a>
                   <a href="./data.html" class="link active">Analytics</a>
+                  <a href="./api.php" class="link">Connect to the API</a>
               </div>
 
               <div class="avatar" id="avatar">
@@ -46,10 +47,9 @@
       </div>
   </nav>
 
-<h1>Social Media Engagement Dashboard</h1>
-
 <div class="dashboard">
 
+  <h1>Instagram</h1>
   <div class="platform-section">
     <div class="chart-container">
       <h2>Instagram - Engagement Trends</h2>
@@ -61,6 +61,7 @@
     </div>
   </div>
 
+  <h1>Facebook</h1>
   <div class="platform-section">
     <div class="chart-container">
       <h2>Facebook - Engagement Trends</h2>
@@ -72,6 +73,7 @@
     </div>
   </div>
 
+  <h1>X/Tweeter</h1>
   <div class="platform-section">
     <div class="chart-container">
       <h2>X - Engagement Trends</h2>
@@ -83,6 +85,7 @@
     </div>
   </div>
 
+  <h1>LinkedIn</h1>
   <div class="platform-section">
     <div class="chart-container">
       <h2>LinkedIn - Engagement Trends</h2>

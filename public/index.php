@@ -43,6 +43,7 @@ $selected = [
                     <a href="./index.php" class="link active">Home</a>
                     <a href="./products.php" class="link">Products</a>
                     <a href="./data.html" class="link active">Analytics</a>
+                    <a href="./api.php" class="link">Connect to the API</a>
                 </div>
 
                 <div class="avatar" id="avatar">
@@ -120,8 +121,6 @@ $selected = [
         </div>
     </main>
 
-
-    <script src=""></script>
 </body>
 
 </html>

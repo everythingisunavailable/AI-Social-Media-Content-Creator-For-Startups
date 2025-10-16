@@ -21,6 +21,8 @@
             <div class="nav-right">
                     <a href="./index.php" class="link active">Home</a>
                     <a href="./products.php" class="link">Products</a>
+                    <a href="./data.php" class="link">Analytics</a>
+                    <a href="./api.php" class="link">Connect to the API</a>
                 </div>
 
                 <div class="avatar" id="avatar">
