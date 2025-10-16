@@ -5,7 +5,6 @@ $description = $_POST['description'] ?? null;
 $tone        = $_POST['tone'] ?? null;
 $keywords    = $_POST['keywords'] ?? null;
 
-// Handle uploaded image (if any)
 $imageName = null;
 if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     $imageTmp  = $_FILES['image']['tmp_name'];
@@ -16,7 +15,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
 }
 
 require 'product.php';
-
-$product_id = create_product(4, $name, $description, $tone, $keywords, $destPath);
+startSession();
+$product_id = create_product($_SESSION['user_id'], $name, $description, $tone, $keywords, $destPath);
 setSession("product_id", $product_id);
 header('Location: ../public/post.php');

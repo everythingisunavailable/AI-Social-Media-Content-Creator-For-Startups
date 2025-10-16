@@ -1,6 +1,11 @@
 <?php
+require '../server/session.inc.php';
 require '../server/posts.php';
-$data = get_posts(4);
+
+startSession();
+if(!isset($_SESSION['user_id'])) header("Location: ../public/google_login.php");
+
+$data = get_posts($_SESSION['user_id']);
 $selected = [
     'instagram' => null,
     'facebook'  => null,
@@ -29,7 +34,7 @@ $selected = [
 
         <div class="nav-wrap">
             <div class="nav-left">
-                <h1 class="logo">shAIr</h1>
+                <h1 class="logo">sh<span class = "logo gradient">AI</span>r</h1>
             </div>
 
 
@@ -37,10 +42,13 @@ $selected = [
                 <div class="links">
                     <a href="./index.php" class="link active">Home</a>
                     <a href="./products.php" class="link">Products</a>
+                    <a href="./data.html" class="link active">Analytics</a>
                 </div>
 
                 <div class="avatar" id="avatar">
-                    <img src="" alt="User Avatar" id="avatarImg">
+                    <?php 
+                    echo '<img src=" '."#".' " alt="User Avatar" id="avatarImg">';
+                    ?>
                 </div>
             </div>
 

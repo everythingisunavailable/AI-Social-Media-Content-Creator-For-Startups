@@ -1,0 +1,82 @@
+[
+  {
+    "post_id": 1,
+    "platform": "Instagram",
+    "likes": 120,
+    "comments": 15,
+    "shares": 10,
+    "impressions": 1500,
+    "clicks": 50,
+    "date_posted": "2025-10-10T14:32:00Z"
+  },
+  {
+    "post_id": 5,
+    "platform": "Instagram",
+    "likes": 200,
+    "comments": 25,
+    "shares": 30,
+    "impressions": 2500,
+    "clicks": 80,
+    "date_posted": "2025-10-12T12:30:00Z"
+  },
+  {
+    "post_id": 9,
+    "platform": "Instagram",
+    "likes": 150,
+    "comments": 20,
+    "shares": 15,
+    "impressions": 1800,
+    "clicks": 60,
+    "date_posted": "2025-10-14T14:10:00Z"
+  },
+  {
+    "post_id": 12,
+    "platform": "Instagram",
+    "likes": 220,
+    "comments": 28,
+    "shares": 35,
+    "impressions": 2700,
+    "clicks": 90,
+    "date_posted": "2025-10-16T11:00:00Z"
+  },
+  {
+    "post_id": 15,
+    "platform": "Instagram",
+    "likes": 260,
+    "comments": 32,
+    "shares": 40,
+    "impressions": 3000,
+    "clicks": 110,
+    "date_posted": "2025-10-18T13:20:00Z"
+  },
+  {
+    "post_id": 18,
+    "platform": "Instagram",
+    "likes": 310,
+    "comments": 40,
+    "shares": 50,
+    "impressions": 3500,
+    "clicks": 130,
+    "date_posted": "2025-10-20T15:45:00Z"
+  },
+  {
+    "post_id": 21,
+    "platform": "Instagram",
+    "likes": 380,
+    "comments": 48,
+    "shares": 60,
+    "impressions": 4200,
+    "clicks": 160,
+    "date_posted": "2025-10-22T10:15:00Z"
+  },
+  {
+    "post_id": 25,
+    "platform": "Instagram",
+    "likes": 450,
+    "comments": 55,
+    "shares": 75,
+    "impressions": 5000,
+    "clicks": 200,
+    "date_posted": "2025-10-24T17:00:00Z"
+  }
+]

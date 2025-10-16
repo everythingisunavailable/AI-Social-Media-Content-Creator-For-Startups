@@ -1,0 +1,82 @@
+[
+  {
+    "post_id": 1,
+    "platform": "Facebook",
+    "likes": 80,
+    "comments": 12,
+    "shares": 8,
+    "impressions": 1600,
+    "clicks": 32,
+    "date_posted": "2025-10-11T12:00:00Z"
+  },
+  {
+    "post_id": 2,
+    "platform": "Facebook",
+    "likes": 100,
+    "comments": 15,
+    "shares": 10,
+    "impressions": 2000,
+    "clicks": 40,
+    "date_posted": "2025-10-12T12:00:00Z"
+  },
+  {
+    "post_id": 3,
+    "platform": "Facebook",
+    "likes": 150,
+    "comments": 22,
+    "shares": 15,
+    "impressions": 3000,
+    "clicks": 60,
+    "date_posted": "2025-10-13T12:00:00Z"
+  },
+  {
+    "post_id": 4,
+    "platform": "Facebook",
+    "likes": 220,
+    "comments": 33,
+    "shares": 22,
+    "impressions": 4400,
+    "clicks": 88,
+    "date_posted": "2025-10-14T12:00:00Z"
+  },
+  {
+    "post_id": 5,
+    "platform": "Facebook",
+    "likes": 300,
+    "comments": 45,
+    "shares": 30,
+    "impressions": 6000,
+    "clicks": 120,
+    "date_posted": "2025-10-15T12:00:00Z"
+  },
+  {
+    "post_id": 6,
+    "platform": "Facebook",
+    "likes": 450,
+    "comments": 67,
+    "shares": 45,
+    "impressions": 9000,
+    "clicks": 180,
+    "date_posted": "2025-10-16T12:00:00Z"
+  },
+  {
+    "post_id": 7,
+    "platform": "Facebook",
+    "likes": 700,
+    "comments": 105,
+    "shares": 70,
+    "impressions": 14000,
+    "clicks": 280,
+    "date_posted": "2025-10-17T12:00:00Z"
+  },
+  {
+    "post_id": 8,
+    "platform": "Facebook",
+    "likes": 1000,
+    "comments": 150,
+    "shares": 100,
+    "impressions": 20000,
+    "clicks": 400,
+    "date_posted": "2025-10-18T12:00:00Z"
+  }
+]
