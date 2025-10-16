@@ -1,0 +1,82 @@
+[
+  {
+    "post_id": 1,
+    "platform": "X",
+    "likes": 100,
+    "comments": 12,
+    "shares": 20,
+    "impressions": 2500,
+    "clicks": 35,
+    "date_posted": "2025-10-12T15:00:00Z"
+  },
+  {
+    "post_id": 2,
+    "platform": "X",
+    "likes": 300,
+    "comments": 36,
+    "shares": 60,
+    "impressions": 7500,
+    "clicks": 105,
+    "date_posted": "2025-10-13T15:00:00Z"
+  },
+  {
+    "post_id": 3,
+    "platform": "X",
+    "likes": 200,
+    "comments": 24,
+    "shares": 40,
+    "impressions": 5000,
+    "clicks": 70,
+    "date_posted": "2025-10-14T15:00:00Z"
+  },
+  {
+    "post_id": 4,
+    "platform": "X",
+    "likes": 500,
+    "comments": 60,
+    "shares": 100,
+    "impressions": 12500,
+    "clicks": 175,
+    "date_posted": "2025-10-15T15:00:00Z"
+  },
+  {
+    "post_id": 5,
+    "platform": "X",
+    "likes": 400,
+    "comments": 48,
+    "shares": 80,
+    "impressions": 10000,
+    "clicks": 140,
+    "date_posted": "2025-10-16T15:00:00Z"
+  },
+  {
+    "post_id": 6,
+    "platform": "X",
+    "likes": 700,
+    "comments": 84,
+    "shares": 140,
+    "impressions": 17500,
+    "clicks": 244,
+    "date_posted": "2025-10-17T15:00:00Z"
+  },
+  {
+    "post_id": 7,
+    "platform": "X",
+    "likes": 600,
+    "comments": 72,
+    "shares": 120,
+    "impressions": 15000,
+    "clicks": 210,
+    "date_posted": "2025-10-18T15:00:00Z"
+  },
+  {
+    "post_id": 8,
+    "platform": "X",
+    "likes": 900,
+    "comments": 108,
+    "shares": 180,
+    "impressions": 22500,
+    "clicks": 315,
+    "date_posted": "2025-10-19T15:00:00Z"
+  }
+]

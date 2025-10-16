@@ -1,0 +1,82 @@
+[
+  {
+    "post_id": 1,
+    "platform": "LinkedIn",
+    "likes": 90,
+    "comments": 18,
+    "shares": 13,
+    "impressions": 2700,
+    "clicks": 45,
+    "date_posted": "2025-10-13T10:30:00Z"
+  },
+  {
+    "post_id": 2,
+    "platform": "LinkedIn",
+    "likes": 110,
+    "comments": 22,
+    "shares": 16,
+    "impressions": 3300,
+    "clicks": 55,
+    "date_posted": "2025-10-14T10:30:00Z"
+  },
+  {
+    "post_id": 3,
+    "platform": "LinkedIn",
+    "likes": 140,
+    "comments": 28,
+    "shares": 21,
+    "impressions": 4200,
+    "clicks": 70,
+    "date_posted": "2025-10-15T10:30:00Z"
+  },
+  {
+    "post_id": 4,
+    "platform": "LinkedIn",
+    "likes": 180,
+    "comments": 36,
+    "shares": 27,
+    "impressions": 5400,
+    "clicks": 90,
+    "date_posted": "2025-10-16T10:30:00Z"
+  },
+  {
+    "post_id": 5,
+    "platform": "LinkedIn",
+    "likes": 230,
+    "comments": 46,
+    "shares": 34,
+    "impressions": 6900,
+    "clicks": 115,
+    "date_posted": "2025-10-17T10:30:00Z"
+  },
+  {
+    "post_id": 6,
+    "platform": "LinkedIn",
+    "likes": 300,
+    "comments": 60,
+    "shares": 45,
+    "impressions": 9000,
+    "clicks": 150,
+    "date_posted": "2025-10-18T10:30:00Z"
+  },
+  {
+    "post_id": 7,
+    "platform": "LinkedIn",
+    "likes": 380,
+    "comments": 76,
+    "shares": 57,
+    "impressions": 11400,
+    "clicks": 190,
+    "date_posted": "2025-10-19T10:30:00Z"
+  },
+  {
+    "post_id": 8,
+    "platform": "LinkedIn",
+    "likes": 480,
+    "comments": 96,
+    "shares": 72,
+    "impressions": 14400,
+    "clicks": 240,
+    "date_posted": "2025-10-20T10:30:00Z"
+  }
+]

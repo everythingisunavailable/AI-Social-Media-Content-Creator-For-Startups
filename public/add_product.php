@@ -14,7 +14,7 @@
 
         <div class="nav-wrap">
             <div class="nav-left">
-                <h1 class="logo">shAIr</h1>
+                <h1 class="logo">sh<span class="logo gradient">AI</span>r</h1>
             </div>
 
 

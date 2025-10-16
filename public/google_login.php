@@ -2,7 +2,11 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require '../env.php';
 
+//test user
 session_start();
+$_SESSION['user_id'] = 2;
+header("Location: ../public/index.php");
+exit();
 
 // Create Google Client
 $client = new Google_Client();

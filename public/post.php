@@ -27,7 +27,7 @@
 
         <div class="nav-wrap">
             <div class="nav-left">
-                <h1 class="logo">shAIr</h1>
+                <h1 class="logo">sh<span class="logo gradient">AI</span>r</h1>
             </div>
 
 
@@ -35,7 +35,7 @@
                 <div class="links">
                     <a href="./index.php" class="link active">Home</a>
                     <a href="./products.php" class="link">Products</a>
-
+                    <a href="./data.html" class="link active">Analytics</a>
                 </div>
 
                 <div class="avatar" id="avatar">
