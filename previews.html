@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Select Post</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./previews.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-wrap">
+            <div class="nav-left">
+                <h1 class="logo">shAIr</h1>
+            </div>
+            <div class="nav-right">
+                <div class="links">
+                    <a href="./dashboard.html" class="link active">Home</a>
+                    <a href="./products.html" class="link">Products</a>
+                    <a href="./data.html" class="link">Analytics</a>
+                </div>
+                <div class="avatar" id="avatar"><img src="https://api.dicebear.com/9.x/bottts/svg?seed=sii"
+                        alt="avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs" role="tablist" aria-p="Social platforms">
+        <div class="tab active" data-platform="instagram" role="tab" aria-selected="true">Instagram</div>
+        <div class="tab" data-platform="facebook" role="tab" aria-selected="false">Facebook</div>
+        <div class="tab" data-platform="x" role="tab" aria-selected="false">X</div>
+        <div class="tab" data-platform="linkedin" role="tab" aria-selected="false">LinkedIn</div>
+    </div>
+
+    <main class="container">
+        <section class="card" aria-labelledby="create-post-title">
+
+            <h2 id="create-post-title">Instagram</h2>
+            <p id="helperText" class="helper">Preview your full post before sharing.</p>
+
+            <div class="platform-section active" data-platform="instagram" id="section-instagram">
+                <div class="media-area" aria-live="polite">
+                    <img src="./produkte.jpg" alt="Instagram image" class="product-img" id="img-instagram">
+                    <div class="add-image-btn"><a href="#" data-input="input-instagram">+</a></div>
+                    <input type="file" id="input-instagram" accept="image/*" style="display:none">
+                </div>
+
+                <p for="desc-instagram" class="small">Captions</p>
+                <textarea id="desc-instagram" placeholder="Instagram caption...">Sample Instagram caption</textarea>
+            </div>
+
+            <div class="platform-section" data-platform="facebook" id="section-facebook">
+                <div class="media-area" aria-live="polite">
+                    <img src="./produkte.jpg" alt="Facebook image" class="product-img" id="img-facebook">
+                    <div class="add-image-btn"><a href="#" data-input="input-facebook">+</a></div>
+                    <input type="file" id="input-facebook" accept="image/*" style="display:none">
+                </div>
+
+                <p for="desc-facebook" class="small">Captions</p>
+                <textarea id="desc-facebook" placeholder="Facebook post...">Sample Facebook post text</textarea>
+            </div>
+
+            <div class="platform-section" data-platform="x" id="section-x">
+                <div class="media-area" aria-live="polite">
+                    <img src="./produkte.jpg" alt="X image" class="product-img" id="img-x">
+                    <div class="add-image-btn"><a href="#" data-input="input-x">+</a></div>
+                    <input type="file" id="input-x" accept="image/*" style="display:none">
+                </div>
+
+                <p for="desc-x" class="small">Captions</p>
+                <textarea id="desc-x" placeholder="X / Twitter text...">Sample X message</textarea>
+            </div>
+
+            <div class="platform-section" data-platform="linkedin" id="section-linkedin">
+                <div class="media-area" aria-live="polite">
+                    <img src="./produkte.jpg" alt="LinkedIn image" class="product-img" id="img-linkedin">
+                    <div class="add-image-btn"><a href="#" data-input="input-linkedin">+</a></div>
+                    <input type="file" id="input-linkedin" accept="image/*" style="display:none">
+                </div>
+
+                <p for="desc-linkedin" class="small">Captions</p>
+                <textarea id="desc-linkedin" placeholder="LinkedIn post...">Sample LinkedIn post</textarea>
+            </div>
+
+
+
+        </section>
+
+        <div class="actions" style="margin-top:18px">
+            <button id="scheduleBtn" class="btn-primary" type="button">Schedule</button>
+            <button id="postBtn" class="btn-primary" type="button">Post</button>
+            <button id="rutineBtn" class="btn-primary" type="button">Rutine</button>
+            <button id="shareBtn" class="btn-primary" type="button">Share</button>
+
+        </div>
+
+
+    </main>
+
+    <script>
+        // basic tab/section switching with per-platform content preserved
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.platform-section');
+        const heading = document.getElementById('create-post-title');
+        const helperText = document.getElementById('helperText');
+
+        // Optional platform-specific helper messages
+        const helperByPlatform = {
+            instagram: 'Preview your full Instagram post before sharing.',
+            facebook: 'Preview your full Facebook post before sharing.',
+            x: 'Preview your full X post before sharing.',
+            linkedin: 'Preview your full LinkedIN post before sharing.'
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // toggle active tab
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+
+                // show matching section
+                const platform = tab.dataset.platform;
+                sections.forEach(s => s.classList.toggle('active', s.dataset.platform === platform));
+
+                // update heading & helper
+                const displayName = platform.charAt(0).toUpperCase() + platform.slice(1);
+                heading.textContent = displayName;
+                helperText.textContent = helperByPlatform[platform] || 'Add an image, write a description, then schedule or post immediately.';
+            });
+        });
+
+        // small helper: wire add-image links to open the file input for each platform
+        document.querySelectorAll('.add-image-btn a').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const inputId = btn.dataset.input;
+                const input = document.getElementById(inputId);
+                if (input) input.click();
+            });
+        });
+
+        // preview image when a file is chosen
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', (e) => {
+                const file = e.target.files && e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (ev) => {
+                    // find the sibling image inside the same section
+                    const section = input.closest('.platform-section');
+                    if (!section) return;
+                    const img = section.querySelector('.product-img');
+                    if (img) img.src = ev.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+
+        // Example: Post button shows the active platform and its text (for demo)
+        document.getElementById('postBtn').addEventListener('click', () => {
+            const activeTab = document.querySelector('.tab.active').dataset.platform;
+            const section = document.querySelector(`.platform-section[data-platform="${activeTab}"]`);
+            if (!section) return;
+            const text = section.querySelector('textarea').value;
+            alert(`Posting to ${activeTab.toUpperCase()}:\n\n${text.slice(0, 200)}${text.length > 200 ? '...' : ''}`);
+        });
+    </script>
+</body>
+
+</html>
