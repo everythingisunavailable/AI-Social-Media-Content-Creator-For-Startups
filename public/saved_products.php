@@ -43,7 +43,7 @@ $saved_products = get_products($_SESSION['user_id']);
                 </div>
 
                 <div class="avatar" id="avatar">
-                    <img src="" alt="User Avatar" id="avatarImg">
+                    <img src="https://api.dicebear.com/9.x/bottts/svg?seed=sii" alt="avatar">
                 </div>
             </div>
 
@@ -56,16 +56,15 @@ $saved_products = get_products($_SESSION['user_id']);
 
             <div class="grid" role="list">
             <?php foreach ($saved_products as $product): ?>
-                <label class="card" role="listitem">
+                <label class="card" role="listitem" 
+                <?php echo 'style="background:url('. htmlspecialchars($product['image_url']) .');background-size:cover; background-position: center;"'?>
+                >
                     <input type="radio" name="product_id" value="<?= htmlspecialchars($product['id']) ?>" required>
                     <div class="products">
                         <p class="prod-name"><?= htmlspecialchars($product['name']) ?></p>
                         <p class="prod-desc"><?= htmlspecialchars($product['description']) ?></p>
                         <p class="prod-tone"><strong>Tone:</strong> <?= htmlspecialchars($product['tone']) ?></p>
                         <p class="prod-keywords"><strong>Keywords:</strong> <?= htmlspecialchars($product['keywords']) ?></p>
-                        <?php if (!empty($product['image_url'])): ?>
-                            <img src="<?= htmlspecialchars($product['image_url']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" width="100">
-                        <?php endif; ?>
                         <p class="prod-updated">
                             Updated <time datetime="<?= date('c', strtotime($product['updated_at'] ?? date('Y-m-d'))) ?>">
                             <?= date('M d, Y', strtotime($product['updated_at'] ?? date('Y-m-d'))) ?></time>

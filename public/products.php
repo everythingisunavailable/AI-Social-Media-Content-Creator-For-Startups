@@ -36,7 +36,7 @@ $data = get_products($_SESSION['user_id']);
                 </div>
 
                 <div class="avatar" id="avatar">
-                    <img src="" alt="User Avatar" id="avatarImg">
+                    <img src="https://api.dicebear.com/9.x/bottts/svg?seed=sii" alt="avatar">
                 </div>
             </div>
 
@@ -67,7 +67,9 @@ $data = get_products($_SESSION['user_id']);
                 <?php 
                 foreach ($data as $key => $value) {
                     echo '
-                        <a href="#" class="card">
+                        <a href="#" class="card" 
+                        style="background:url('. htmlspecialchars($data[$key]['image_url']) .');background-size:cover; background-position: center;"
+                        >
                             <div class="products">
                                 <p class="prod-name">'. $data[$key]['name'] .'</p>
                                 <p class="prod-desc">'. $data[$key]['description'] .'</p>

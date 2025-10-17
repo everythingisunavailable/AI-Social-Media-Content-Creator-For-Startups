@@ -47,9 +47,7 @@ $selected = [
                 </div>
 
                 <div class="avatar" id="avatar">
-                    <?php 
-                    echo '<img src=" '."#".' " alt="User Avatar" id="avatarImg">';
-                    ?>
+                    <img src="https://api.dicebear.com/9.x/bottts/svg?seed=sii" alt="avatar">
                 </div>
             </div>
 

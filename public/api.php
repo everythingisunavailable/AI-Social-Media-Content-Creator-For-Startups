@@ -80,7 +80,7 @@
                     <a href="./api.php" class="link">Connect to the API</a>
                 </div>
                 <div class="avatar" id="avatar">
-                    <img src="" alt="User Avatar" id="avatarImg">
+                    <img src="https://api.dicebear.com/9.x/bottts/svg?seed=sii" alt="avatar">
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ require __DIR__ . '/product.php';
 use GuzzleHttp\Client;
 
 $product_id = $_POST['product_id'] ?? null;
-$platforms = $_POST['platforms'] ?? []; // this will be an array
+$platforms = $_POST['platforms'] ?? [];
 $ai_option = $_POST['ai_option'] ?? null;
 
 $product = get_product($product_id);
@@ -68,7 +68,7 @@ try {
 $captions = seperate_output($data['choices'][0]['message']['content']);
 
 setSession("captions", $captions);
-header("Location: ../public/edit_post.php");
+header("Location: ../public/preview.php");
 
 function seperate_output($output){
     preg_match_all('/\[(.*?)\]\s*(?:\(.*?\))?\s*(.*?)(?=\n\[[^\]]+\]|\z)/s', $output, $matches, PREG_SET_ORDER);

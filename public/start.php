@@ -32,7 +32,7 @@
     <div class="left">
         <h2>Choose Your AI</h2>
         <form action="index.php" method="get">
-            <label class="ai-option"><input type="radio" name="ai" value="llama3"> LLaMA 3 (Free)</label>
+            <label class="ai-option"><input type="radio" name="ai" value="openai/gpt-oss-20b    ">Openai/gpt-oss-20b (free)</label>
             <label class="ai-option"><input type="radio" name="ai" value="mixtral"> Mixtral</label>
             <label class="ai-option"><input type="radio" name="ai" value="gemma"> Gemma</label>
             <label class="ai-option"><input type="radio" name="ai" value="llama2"> LLaMA 2</label>
